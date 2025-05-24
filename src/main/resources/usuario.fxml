@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxspring.controller.UsuarioController">
+   <top>
+      <VBox spacing="10.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <Label style="-fx-font-size: 18; -fx-font-weight: bold;" text="Gerenciamento de Usuários - Spring + Hibernate + JavaFX" />
+         <Separator />
+      </VBox>
+   </top>
+   <center>
+      <VBox spacing="15.0">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         
+         <!-- Formulário -->
+         <VBox spacing="10.0">
+            <Label style="-fx-font-size: 14; -fx-font-weight: bold;" text="Formulário de Usuário" />
+            
+            <GridPane hgap="10.0" vgap="10.0">
+               <columnConstraints>
+                  <ColumnConstraints minWidth="80.0" />
+                  <ColumnConstraints />
+               </columnConstraints>
+               
+               <Label text="Nome:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+               <TextField fx:id="txtNome" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+               
+               <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+               <TextField fx:id="txtEmail" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               
+               <Label text="Idade:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+               <TextField fx:id="txtIdade" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            </GridPane>
+              <HBox spacing="10.0">
+               <Button fx:id="btnSalvar" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Salvar" />
+               <Button fx:id="btnAtualizar" style="-fx-background-color: #2196F3; -fx-text-fill: white;" text="Atualizar" />
+               <Button fx:id="btnDeletar" style="-fx-background-color: #f44336; -fx-text-fill: white;" text="Deletar" />
+               <Button fx:id="btnLimpar" text="Limpar" />
+            </HBox>
+            
+            <Separator />
+            
+            <!-- Botões de Teste -->
+            <VBox spacing="10.0">
+               <Label style="-fx-font-size: 14; -fx-font-weight: bold;" text="Testes de Transação" />
+               <HBox spacing="10.0">
+                  <Button fx:id="btnTesteAtualizacao" style="-fx-background-color: #FF9800; -fx-text-fill: white;" text="Teste Atualização em Lote" />
+                  <Button fx:id="btnTesteRollback" style="-fx-background-color: #9C27B0; -fx-text-fill: white;" text="Teste Rollback" />
+                  <Button fx:id="btnCriarDadosTeste" style="-fx-background-color: #607D8B; -fx-text-fill: white;" text="Criar Dados de Teste" />
+               </HBox>
+            </VBox>
+         </VBox>
+         
+         <Separator />
+         
+         <!-- Busca -->
+         <VBox spacing="10.0">
+            <Label style="-fx-font-size: 14; -fx-font-weight: bold;" text="Buscar Usuários" />
+            <HBox spacing="10.0">
+               <TextField fx:id="txtBusca" prefWidth="300.0" promptText="Digite o nome para buscar..." />
+               <Button fx:id="btnBuscar" text="Buscar" />
+            </HBox>
+         </VBox>
+         
+         <Separator />
+         
+         <!-- Tabela -->
+         <VBox spacing="10.0" VBox.vgrow="ALWAYS">
+            <HBox>
+               <Label style="-fx-font-size: 14; -fx-font-weight: bold;" text="Lista de Usuários" />
+               <Region HBox.hgrow="ALWAYS" />
+               <Label fx:id="lblTotalUsuarios" style="-fx-font-size: 12;" text="Total: 0 usuário(s)" />
+            </HBox>
+            
+            <TableView fx:id="tabelaUsuarios" VBox.vgrow="ALWAYS">
+               <columns>
+                  <TableColumn fx:id="colId" prefWidth="50.0" text="ID" />
+                  <TableColumn fx:id="colNome" prefWidth="200.0" text="Nome" />
+                  <TableColumn fx:id="colEmail" prefWidth="250.0" text="Email" />
+                  <TableColumn fx:id="colIdade" prefWidth="80.0" text="Idade" />
+               </columns>
+            </TableView>
+         </VBox>
+      </VBox>
+   </center>
+   <bottom>
+      <VBox>
+         <Separator />
+         <HBox>
+            <padding>
+               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+            <Label fx:id="lblStatus" style="-fx-font-size: 12;" text="Pronto." />
+         </HBox>
+      </VBox>
+   </bottom>
+</BorderPane>
