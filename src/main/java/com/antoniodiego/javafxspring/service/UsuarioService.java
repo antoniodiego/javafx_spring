@@ -1,10 +1,11 @@
-package com.example.javafxspring.service;
+package com.antoniodiego.javafxspring.service;
 
-import com.example.javafxspring.model.Usuario;
-import com.example.javafxspring.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.antoniodiego.javafxspring.model.Usuario;
+import com.antoniodiego.javafxspring.repository.UsuarioRepository;
 
 import java.util.List;
 import java.util.Optional;

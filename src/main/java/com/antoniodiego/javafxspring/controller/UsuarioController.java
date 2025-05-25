@@ -1,7 +1,5 @@
-package com.example.javafxspring.controller;
+package com.antoniodiego.javafxspring.controller;
 
-import com.example.javafxspring.model.Usuario;
-import com.example.javafxspring.service.UsuarioService;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -13,6 +11,9 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import com.antoniodiego.javafxspring.model.Usuario;
+import com.antoniodiego.javafxspring.service.UsuarioService;
 
 import java.net.URL;
 import java.util.Arrays;
