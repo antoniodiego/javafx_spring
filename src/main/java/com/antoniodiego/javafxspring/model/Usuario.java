@@ -1,4 +1,4 @@
-package com.example.javafxspring.model;
+package com.antoniodiego.javafxspring.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;

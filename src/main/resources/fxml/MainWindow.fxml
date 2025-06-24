@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.SplitPane?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21"
+            fx:controller="com.antoniodiego.javafxspring.controller.MainWindowController"
+            prefHeight="600.0" prefWidth="800.0">
+    <top>
+        <MenuBar>
+            <Menu text="Arquivo">
+                <MenuItem text="Sair" onAction="#handleExit" />
+            </Menu>
+            <Menu text="Visualizar">
+                <MenuItem text="Atualizar" onAction="#handleRefresh" />
+            </Menu>
+            <Menu text="Ajuda">
+                <MenuItem text="Sobre..." onAction="#handleSobre" />
+            </Menu>
+            <Menu text="Testes">
+                <MenuItem text="Transacional..." onAction="#handleAbrirTesteTransacional" />
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <!-- SplitPane para dividir árvore de tarefas e área de trabalho -->
+        <SplitPane dividerPositions="0.25">
+            <!-- Lado esquerdo: Árvore de Tarefas -->
+            <!-- <fx:include fx:id="taskTreeView" source="ui/TaskTreeView.fxml" /> -->
+            
+            <!-- Lado direito: Pilhas de tarefas -->
+            <fx:include fx:id="pilhasDeTarefasView" source="PilhasDeTarefasView.fxml" />
+        </SplitPane>
+    </center>
+    <bottom>
+        <Label fx:id="statusLabel" text="Pronto">
+            <padding>
+                <Insets top="2" right="5" bottom="2" left="5"/>
+            </padding>
+        </Label>
+    </bottom>
+</BorderPane>

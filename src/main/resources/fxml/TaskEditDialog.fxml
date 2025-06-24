@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+
+<DialogPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21"
+            fx:controller="com.antoniodiego.javafxsprign.controller.TaskEditDialogController"
+            prefWidth="500.0" prefHeight="400.0">
+    
+    <content>
+        <GridPane hgap="10" vgap="10">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            
+            <columnConstraints>
+                <ColumnConstraints minWidth="100" prefWidth="150" maxWidth="150" hgrow="NEVER"/>
+                <ColumnConstraints minWidth="200" prefWidth="300" hgrow="ALWAYS"/>
+            </columnConstraints>
+            
+            <!-- Título -->
+            <Label text="Título:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="titleField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+            
+            <!-- Descrição -->
+            <Label text="Descrição:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextArea fx:id="descriptionArea" wrapText="true" prefHeight="100.0" 
+                     GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            
+            <!-- Status -->
+            <Label text="Concluída:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <CheckBox fx:id="completedCheckbox" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            
+            <!-- Data de Conclusão -->
+            <Label text="Data de Conclusão:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <HBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                <DatePicker fx:id="completionDatePicker" />
+                <CheckBox fx:id="enableCompletionDate" text="Habilitar" />
+            </HBox>
+            
+            <!-- Prioridade -->
+            <Label text="Prioridade:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <ComboBox fx:id="priorityComboBox" maxWidth="150" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            
+            <!-- Data para fazer -->
+            <Label text="Data para fazer:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <DatePicker fx:id="dueDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            
+            <!-- Comentários -->
+            <Label text="Comentários:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+            <VBox spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                <ListView fx:id="commentsListView" prefHeight="100.0" />
+                <HBox spacing="5">
+                    <Button fx:id="addCommentButton" text="Adicionar" onAction="#handleAddComment" />
+                    <Button fx:id="editCommentButton" text="Editar" onAction="#handleEditComment" />
+                    <Button fx:id="deleteCommentButton" text="Excluir" onAction="#handleDeleteComment" />
+                </HBox>
+            </VBox>
+            
+            <!-- ID da tarefa e prioridade (detalhes) -->
+            <Label text="ID:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+            <Label fx:id="idLabel" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label text="Prioridade atual:" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+            <Label fx:id="prioridadeLabel" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+        </GridPane>
+    </content>
+    
+    <buttonTypes>
+        <ButtonType fx:constant="APPLY" />
+        <ButtonType fx:constant="CANCEL" />
+    </buttonTypes>
+</DialogPane>

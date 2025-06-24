@@ -1,5 +1,6 @@
-package com.example.javafxspring.controller;
+package com.antoniodiego.javafxspring.controller;
 
+<<<<<<< HEAD:src/main/java/com/example/javafxspring/controller/UsuarioController.java
 import java.net.URL;
 import java.util.List;
 import java.util.Optional;
@@ -11,6 +12,8 @@ import org.springframework.stereotype.Component;
 import com.example.javafxspring.model.Usuario;
 import com.example.javafxspring.service.UsuarioService;
 
+=======
+>>>>>>> 8bd250582c022b579889352c6761da569119342e:src/main/java/com/antoniodiego/javafxspring/controller/UsuarioController.java
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -26,6 +29,20 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+<<<<<<< HEAD:src/main/java/com/example/javafxspring/controller/UsuarioController.java
+=======
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.antoniodiego.javafxspring.model.Usuario;
+import com.antoniodiego.javafxspring.service.UsuarioService;
+
+import java.net.URL;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+import java.util.ResourceBundle;
+>>>>>>> 8bd250582c022b579889352c6761da569119342e:src/main/java/com/antoniodiego/javafxspring/controller/UsuarioController.java
 
 @Component
 public class UsuarioController implements Initializable {

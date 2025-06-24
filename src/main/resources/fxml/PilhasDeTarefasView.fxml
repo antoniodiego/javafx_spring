@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="com.antoniodiego.javafxspring.controller.PilhasDeTarefasController"
+      spacing="10" 
+      style="-fx-background-color: #f4f4f4;"
+      fx:id="root">
+    
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+    
+    <ScrollPane fx:id="scrollPane" 
+                fitToWidth="true" 
+                fitToHeight="true" 
+                hbarPolicy="AS_NEEDED" 
+                vbarPolicy="AS_NEEDED"
+                VBox.vgrow="ALWAYS">
+        
+        <VBox fx:id="estanteContainer" spacing="10" />
+    </ScrollPane>
+    
+</VBox>
