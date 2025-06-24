@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.antoniodiego.javafxspring.controller.TesteTransacionalController">
+    <top>
+        <Label text="Teste Transacional - Tarefas Compostas" style="-fx-font-size: 18px; -fx-padding: 10;" />
+    </top>
+    <center>
+        <VBox spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="ID:" />
+                <TextField fx:id="idField" promptText="ID da tarefa" />
+                <Button text="Buscar" onAction="#onBuscar" />
+            </HBox>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Título:" />
+                <TextField fx:id="tituloField" promptText="Título da tarefa" />
+            </HBox>
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Comentário:" />
+                <TextField fx:id="descricaoField" promptText="Comentário" />
+            </HBox>
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Salvar" onAction="#onSalvar" />
+                <Button text="Atualizar" onAction="#onAtualizar" />
+                <Button text="Excluir" onAction="#onRemover" />
+            </HBox>
+            <TextArea fx:id="resultadoArea" prefRowCount="3" editable="false" wrapText="true" />
+            <ProgressIndicator fx:id="progressIndicator" visible="false" />
+            <Label fx:id="statusLabel" textFill="red" />
+        </VBox>
+    </center>
+</BorderPane>
